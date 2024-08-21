@@ -1,13 +1,21 @@
 // src/components/TestimonialsCarousel.tsx
-import { useState } from "react";
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-const testimonials = [
+interface Testimonial {
+  text: string;
+  author: string;
+}
+
+const testimonials: Testimonial[] = [
   { text: "Excelente servicio, mi coche quedó como nuevo.", author: "Juan Pérez" },
   { text: "Muy profesionales y atentos. Totalmente recomendado.", author: "María López" },
   { text: "El mejor detailing en la ciudad. No defraudan.", author: "Carlos Fernández" },
+  // Añade más testimonios según sea necesario
 ];
 
-const TestimonialsCarousel = () => {
+const TestimonialsCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextTestimonial = () => {
@@ -21,35 +29,37 @@ const TestimonialsCarousel = () => {
   };
 
   return (
-    <div className="relative bg-gray-800 p-8 rounded-lg shadow-lg overflow-hidden text-white">
-      <div className="absolute inset-0 flex items-center justify-between px-4">
-        <button
-          onClick={prevTestimonial}
-          className="p-2 bg-white text-gray-800 rounded-full shadow-md hover:bg-gray-200 transition-transform transform hover:scale-105"
-        >
-          &#9664;
-        </button>
-        <button
-          onClick={nextTestimonial}
-          className="p-2 bg-white text-gray-800 rounded-full shadow-md hover:bg-gray-200 transition-transform transform hover:scale-105"
-        >
-          &#9654;
-        </button>
-      </div>
-      <div className="flex items-center justify-center h-48">
-        <div
-          className="transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {testimonials.map((testimonial, index) => (
+    <div className="bg-white py-12">
+      <div className="container mx-auto relative">
+        <h2 className="text-3xl font-bold text-center mb-8">Lo que dicen nuestros clientes</h2>
+        <div className="flex justify-center items-center">
+          <button
+            onClick={prevTestimonial}
+            className="absolute left-3 p-3 bg-gray-400 text-white rounded-full hover:bg-gray-700  transition-transform transform hover:scale-105"
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <div className="overflow-hidden w-full max-w-xl">
             <div
-              key={index}
-              className="w-full max-w-md px-4 py-6 bg-red-500 rounded-lg shadow-md mx-4"
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              <p className="text-lg italic">"{testimonial.text}"</p>
-              <p className="mt-4 font-bold">- {testimonial.author}</p>
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="min-w-full px-4">
+                  <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <p className="text-lg italic text-gray-700">"{testimonial.text}"</p>
+                    <p className="mt-4 font-bold text-gray-900">- {testimonial.author}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          <button
+            onClick={nextTestimonial}
+            className="absolute right-3 p-3 bg-gray-400 text-white rounded-full hover:bg-gray-700 transition-transform transform hover:scale-105"
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import SubmitButton from './SubmitButton';
 
 
 const ContactForm: React.FC = () => (
-  <div className="bg-white p-6 rounded-md shadow-md">
+  <div className="bg-gray-100 p-6 rounded-md shadow-md">
     <h2 className="text-2xl font-bold text-gray-800 mb-4">Información de Contacto</h2>
     <form>
       <input
