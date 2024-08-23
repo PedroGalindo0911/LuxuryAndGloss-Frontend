@@ -10,7 +10,6 @@ const faqs = [
     question: "¿Qué productos utilizan?",
     answer: "Utilizamos productos de alta calidad de marcas reconocidas en el sector del detailing.",
   },
-  // Añade más preguntas y respuestas según sea necesario
 ];
 
 const FAQs = () => {
@@ -23,7 +22,7 @@ const FAQs = () => {
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Preguntas Frecuentes</h2>
+        <h2 className="text-3xl font-bold  text-center mb-8">Preguntas Frecuentes</h2>
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
             <div key={index} className="mb-4">

@@ -21,7 +21,7 @@ const services = [
 const ServicesSection: React.FC = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto text-center">
-      <h2 className="text-4xl font-bold text-black mb-4">Nuestros Servicios</h2>
+      <h2 className="text-4xl font-bold  text-black mb-4">Nuestros Servicios</h2>
       <p className="text-lg text-gray-600 mb-12">
         Desde un simple lavado y encerado hasta un detallado interior y exterior completo, tenemos la experiencia para restaurar tu vehículo a su antigua gloria.
       </p>

@@ -1,4 +1,3 @@
-// src/components/BeforeAfterGallery.tsx
 import React from 'react';
 
 const BeforeAfterGallery = () => {

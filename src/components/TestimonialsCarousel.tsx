@@ -1,4 +1,3 @@
-// src/components/TestimonialsCarousel.tsx
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -9,10 +8,9 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-  { text: "Excelente servicio, mi coche quedó como nuevo.", author: "Juan Pérez" },
-  { text: "Muy profesionales y atentos. Totalmente recomendado.", author: "María López" },
-  { text: "El mejor detailing en la ciudad. No defraudan.", author: "Carlos Fernández" },
-  // Añade más testimonios según sea necesario
+  { text: "Excelente servicio, mi auto quedó como nuevo.", author: "Oscar Cuellar" },
+  { text: "Muy profesionales y atentos. Totalmente recomendado.", author: "Crista Vasquez" },
+  { text: "El mejor detailing en la ciudad. No defraudan.", author: "Diego Montenegro" },
 ];
 
 const TestimonialsCarousel: React.FC = () => {
@@ -31,7 +29,7 @@ const TestimonialsCarousel: React.FC = () => {
   return (
     <div className="bg-white py-12">
       <div className="container mx-auto relative">
-        <h2 className="text-3xl font-bold text-center mb-8">Lo que dicen nuestros clientes</h2>
+        <h2 className="text-3xl font-bold  text-center mb-8">Lo que dicen nuestros clientes</h2>
         <div className="flex justify-center items-center">
           <button
             onClick={prevTestimonial}
