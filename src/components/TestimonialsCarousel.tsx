@@ -11,6 +11,8 @@ const testimonials: Testimonial[] = [
   { text: "Excelente servicio, mi auto quedó como nuevo.", author: "Oscar Cuellar" },
   { text: "Muy profesionales y atentos. Totalmente recomendado.", author: "Crista Vasquez" },
   { text: "El mejor detailing en la ciudad. No defraudan.", author: "Diego Montenegro" },
+  { text: "El mejor detailing en la ciudad. No defraudan.", author: "Diego Mancía" },
+  { text: "El mejor detailing en la ciudad. No defraudan.", author: "Josue Mancía" },
 ];
 
 const TestimonialsCarousel: React.FC = () => {
@@ -37,7 +39,7 @@ const TestimonialsCarousel: React.FC = () => {
           >
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
-          <div className="overflow-hidden w-full max-w-xl">
+          <div className="overflow-hidden w-full max-w-lg">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
