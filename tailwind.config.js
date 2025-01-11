@@ -1,3 +1,7 @@
+// Importa los módulos necesarios
+import defaultTheme from 'tailwindcss/defaultTheme';
+import tailwindScrollbar from 'tailwind-scrollbar';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -21,15 +25,14 @@ export default {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))'
         },
-        // Continua con el resto de los colores
       },
       fontFamily: {
-        heading: ['var(--font-heading)', ...require('tailwindcss/defaultTheme').fontFamily.sans],
-        body: ['var(--font-body)', ...require('tailwindcss/defaultTheme').fontFamily.sans],
+        heading: ['var(--font-heading)', ...defaultTheme.fontFamily.sans],
+        body: ['var(--font-body)', ...defaultTheme.fontFamily.sans],
       },
     },
   },
   plugins: [
-    import('tailwind-scrollbar'),
+    tailwindScrollbar,
   ],
 }
