@@ -5,10 +5,6 @@ import { faHome, faCar } from '@fortawesome/free-solid-svg-icons';
 const ServicesSection: React.FC = () => {
   const [activeService, setActiveService] = useState<string | null>(null);
 
-  const toggleService = (service: string) => {
-    // Si el servicio ya está activo, lo desactivamos, sino lo activamos
-    setActiveService(activeService === service ? null : service);
-  };
 
   const spaceServices = [
     {
