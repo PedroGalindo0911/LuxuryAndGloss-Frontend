@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-black p-4 fixed top-0 left-0 w-full z-50">
+    <nav className="bg-[#D4A373] p-4 fixed top-0 left-0 w-full z-50  ">
       <div className="flex justify-between items-center">
         <div className="text-white text-lg font-bold">Luxury&Gloss</div>
         <div className="md:hidden">
@@ -19,10 +19,10 @@ const Navbar: React.FC = () => {
           </button>
         </div>
         <ul className={`flex-col md:flex-row md:flex justify-around text-white w-full md:w-auto absolute md:static bg-black md:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? 'top-14 left-0 p-4 backdrop-blur-md bg-black/50' : 'top-[-400px]'} md:top-auto md:left-auto space-y-2 md:space-y-0 md:space-x-6`}>
-          <li><a href="#header" className="object-contain transform transition hover:scale-125 block md:inline">Inicio</a></li>
-          <li><a href="#about" className="object-contain transform transition hover:scale-125 block md:inline">Sobre Nosotros</a></li>
-          <li><a href="#gallery" className="object-contain transform transition hover:scale-125 block md:inline">Galería</a></li>
-          <li><a href="#contact" className="object-contain transform transition hover:scale-125 block md:inline">Contacto</a></li>
+          <li><a href="#header" className="object-contain transform transition hover:text-[#8B572A] block md:inline">Inicio</a></li>
+          <li><a href="#about" className="object-contain transform transition hover:text-[#8B572A] block md:inline">Sobre Nosotros</a></li>
+          <li><a href="#gallery" className="object-contain transform transition hover:text-[#8B572A] block md:inline">Galería</a></li>
+          <li><a href="#contact" className="object-contain transform transition hover:text-[#8B572A] block md:inline">Contacto</a></li>
         </ul>
       </div>
     </nav>
