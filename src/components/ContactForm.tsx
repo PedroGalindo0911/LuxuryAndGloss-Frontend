@@ -13,7 +13,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-16">
+    <section id="contact" className="bg-gray-50 py-16">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center md:items-start">
         {/* Información de contacto */}
         <div className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left">

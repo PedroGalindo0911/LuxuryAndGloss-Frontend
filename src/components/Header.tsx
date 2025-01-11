@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarCheck } from '@fortawesome/free-solid-svg-icons';
 
 const Header: React.FC = () => (
-  <div className="bg-[#D4A373] text-white p-6 flex flex-col md:flex-row justify-between items-center mt-10">
+  <div id="header"className="bg-[#D4A373] text-white p-6 flex flex-col md:flex-row justify-between items-center mt-10">
     <div className="md:w-1/2 text-center md:text-left z-10 m-4">
       <h1 className="text-4xl font-bold mb-5 leading-tight animate-fadeIn">
       ¡Limpieza y brillo para tu auto y tus espacios favoritos!
